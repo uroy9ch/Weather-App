@@ -5,40 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cmrWeatherapp</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
   </head>
   <body>
-  
   <nav class="top-bar" data-topbar role="navigation">
       <ul class="title-area">
         <li class="name">
-          <h1><a href="#">My Weather</a></h1>
+          <h1><a href="#">My Weather Wizard</a></h1>
         </li>
          <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
       </ul>
-
-      <section class="top-bar-section">
-        <!-- Right Nav Section -->
-        <ul class="right">
-          <li class="active"><a href="#">Right Button Active</a></li>
-          <li class="has-dropdown">
-            <a href="#">Right Button Dropdown</a>
-            <ul class="dropdown">
-              <li><a href="#">First link in dropdown</a></li>
-              <li class="active"><a href="#">Active link in dropdown</a></li>
-            </ul>
-          </li>
-        </ul>
-      </section>
+        <ul class="infoButton"
+<!---->
+<!--
+          <li><a href="#" class="button info">Air Quality</a></li>
+          <a href="#" class="button secondary">Allergies</a>
+-->
+-->
+          
   </nav>
+  
+  <form>
+     <div class="row">
+        <div class="large-12 columns">
+          <div class="row collapse">
+            <div class="small-10 columns">
+              <input type="text" placeholder="Zip Code">
+            </div>
+            <div class="small-2 columns">
+              <a href="#" class="button postfix">Go</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+  </form>
+  
    
    <div class="row">
-      <div class="small-12 large-6 columns first-col">first</div>
-      <div class="small-12 large-6 columns second-col">second</div>
-
-       
+      <div class="small-12 large-12 columns text-center">
+          <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">
+    </div>
    </div>
+   <div class="row">
+      <div id="weather" class="small-12 large-12 columns text-center">
+         <h2>Todays Weather - Foggy 50</h2>
+         <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
+         
+      </div>
+   </div>
+   
+<!--   Footer -->
+<!--  CSS inherited from app.css -->
+<!--
+   <footer style="background-color: grey; height: 200px;"> 
+      <div class="row">
+          <div class="small-6 large-6 columns">Air Quality</div>
+          <div class="small-6 large-6 columns">Pollution</div>
+      </div>
+
+   </footer>
+-->
     
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
