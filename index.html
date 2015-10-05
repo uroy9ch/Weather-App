@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cmrWeatherapp</title>
-    <link rel="stylesheet" href="stylesheets/app.css" />
+    <link rel="stylesheet" href="stylesheets/app.css" /> 
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <nav class="top-bar" data-topbar role="navigation">
@@ -39,39 +40,66 @@
         </div>
       </div> 
   </form>
+    
+    <div class="row">
         <div class="small-12 large-12 columns text-center">
-          <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">
+            <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">
+        </div>
     </div>
     
 
     
-     
-   <div class="row">
+    <div class="divider"></div>
+        
+    <div class="row">
       <div id="weather" class="small-12 large-12 columns text-center">
-        <nav class="tab-bar">
-  <div class="left-small large-12 columns text center"></div>
-  <div class="middle tab-bar-section"><!-- I'm in the middle --></div>
-  <div class="left-small large-12 columns text center"></div>
-</nav>
-         <h2>Todays Weather - Foggy 50</h2>
+        <h2>Todays Weather - Foggy 50</h2>
          
-         <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
-         <h2> Feeling Froggy!</h2>
-         <ul class="title-area">
+        <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
+        <h2> Feeling Froggy!</h2>
+        <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Air Quality</button><br>
+        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+          <li><a href="#">High</a></li>
+          <li><a href="#">Medium</a></li>
+          <li><a href="#">Low</a></li>
+        </ul>
+
+        <button href="#" data-dropdown="drop1" aria-controls="drop1" aria-expanded="false" class="button dropdown">Pollution Index</button><br>
+        <ul id="drop1" data-dropdown-content class="f-dropdown" aria-hidden="true">
+          <li><a href="#">High</a></li>
+          <li><a href="#">Medium</a></li>
+          <li><a href="#">Low</a></li>
+        </ul>
+       </div>
+    </div>
+
+
+<!--            <a href="#" class="button [radius round]">Air Quality</a>-->
+<!--            <a href="#" class="button [radius round]">Pollution</a>-->
+            
+    
+    <div class="divider"></div>
+
+    <div class="row">
+        <div id="weather" class="small-12 large-12 columns text-center">
+            <h2>Todays Weather - Foggy 50</h2>
+
+            <img class="inhailer" src="inhailer.png" alt="inhaler" onClick="showWeather()">
+            <h2> Don't forget your inhaler today!</h2>
             <a href="#" class="button [radius round]">Air Quality</a>
             <a href="#" class="button [radius round]">Pollution</a>
-
-      </div>
+        </div>
    </div>
    
-   <div class="row">
-      <div id="weather" class="small-12 large-12 columns text-center">
-         <h2>Todays Weather - Chilly 30</h2>
-         <img class="buttercup" src="butterCup.png" alt="buttercup" onClick="showWeather()">
-         <h2> Bundle up Buttercup!</h2>
+    <div class="divider"></div>
+   
+    <div class="row">
+        <div id="weather" class="small-12 large-12 columns text-center">
+            <h2>Todays Weather - Chilly 40</h2>
+            <img class="buttercup" src="butterCup.png" alt="buttercup" onClick="showWeather()">
+            <h2> Bundle up Buttercup!</h2>
             <a href="#" class="button [radius round]">Air Quality</a>
             <a href="#" class="button [radius round]">Pollution</a>
-
       </div>
    </div>
    
