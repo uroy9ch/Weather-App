@@ -1,6 +1,7 @@
 // Foundation JavaScript
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
+$('#result').hide();
 
 var description;
 var aqi; // integer
@@ -32,22 +33,29 @@ function showWeather() {
 
 	// Set another completion function for the request above
 		jqxhr.complete(function() {
-		// Do variable assignment here
-		description = jqxhr.responseJSON.breezometer_description;
-		color = jqxhr.responseJSON.breezometer_color;
-		aqi = jqxhr.responseJSON.breezometer_aqi;
+			// Do variable assignment here
+			description = jqxhr.responseJSON.breezometer_description;
+			color = jqxhr.responseJSON.breezometer_color;
+			aqi = jqxhr.responseJSON.breezometer_aqi;
 			console.log("weather is" + description + "api is" + aqi);
-	});
-	
-	// Use conditional logic here
-//		if (aqi < 50 ) { 
-//		console.log("whatever") 
-//		$("#content").html(...);
-//	};
-	
-	
-	//populate content div based on weather
-	
+
+					// Use conditional logic here
+	//		if (aqi < 50 ) { 
+	//		console.log("whatever") 
+	//		$("#content").html(...);
+	//	};
+
+			//hide wizard div
+			$('#content').hide();
+			//show result div
+			$('#result').show();
+
+			//populate content div based on weather
+			$('#description').html (description);
+			$('#aqi').html('AQI is ' + aqi);
+		});
+
+
 	
 	
 }
