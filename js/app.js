@@ -37,7 +37,7 @@ function showWeather() {
 			description = jqxhr.responseJSON.breezometer_description;
 			color = jqxhr.responseJSON.breezometer_color;
 			aqi = jqxhr.responseJSON.breezometer_aqi;
-			console.log("weather is" + description + "api is" + aqi);
+			console.log("The weather is" + description + "air quality is" + aqi);
 
 					// Use conditional logic here
 	//		if (aqi < 50 ) { 
@@ -52,7 +52,7 @@ function showWeather() {
 
 			//populate content div based on weather
 			$('#description').html (description);
-			$('#aqi').html("<span style='color: " + color + "'>AQI is " + aqi + "</span>");
+			$('#aqi').html("<span style='color: " + color + "'>Air Quality is: " + aqi + "</span>");
 			
 		});
 
