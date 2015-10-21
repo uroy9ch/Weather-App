@@ -2,8 +2,9 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-var weather = {};
+var description;
 var aqi; // integer
+var color;
 
 function showWeather() {
     console.log("weather");
@@ -33,6 +34,7 @@ function showWeather() {
 		jqxhr.complete(function() {
 		// Do variable assignment here
 		description = jqxhr.responseJSON.breezometer_description;
+		color = jqxhr.responseJSON.breezometer_color;
 		aqi = jqxhr.responseJSON.breezometer_aqi;
 			console.log("weather is" + description + "api is" + aqi);
 	});
