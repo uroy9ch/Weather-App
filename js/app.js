@@ -52,7 +52,8 @@ function showWeather() {
 
 			//populate content div based on weather
 			$('#description').html (description);
-			$('#aqi').html('AQI is ' + aqi);
+			$('#aqi').html("<span style='color: " + color + "'>AQI is " + aqi + "</span>");
+			
 		});
 
 
