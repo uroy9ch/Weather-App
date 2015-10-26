@@ -3,9 +3,26 @@
 $(document).foundation();
 $('#result').hide();
 
+
+var totalFrames = 18;
+var frameWidth = 174;
+var speed = 1.5;
+  
+var walkEase = new SteppedEase(totalFrames)
+var finalPosition = '-' + (frameWidth * totalFrames) + 'px 0px';
+
+var walkTL = new TimelineMax()
+walkTL.to('#walker', speed, {
+    backgroundPosition: finalPosition,
+    ease: walkEase,
+    repeat: -1
+});
+
 var description;
 var aqi; // integer
 var color;
+
+
 
 function showWeather() {
     console.log("weather");
@@ -38,6 +55,12 @@ function showWeather() {
 			color = jqxhr.responseJSON.breezometer_color;
 			aqi = jqxhr.responseJSON.breezometer_aqi;
 			console.log("The weather is" + description + "air quality is" + aqi);
+			
+			if(aqi <= 50){
+				console.log("Be sure to take your inhaler today")
+			} else {
+				console.log("ok weather");
+			}
 
 					// Use conditional logic here
 	//		if (aqi < 50 ) { 

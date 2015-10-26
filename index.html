@@ -7,6 +7,7 @@
     <title>cmrWeatherapp</title>
     <link rel="stylesheet" href="stylesheets/app.css" /> 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <!--
     <script src="https://use.typekit.net/ghu1yik.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
@@ -39,11 +40,20 @@
         </div>
       </div> 
   </form>
+   
+    <div class="row">
+        <div id="content" class="small-12 large-12 columns text-center">
+			<img class="brand" src="WeatherWizardbrand.svg" alt="My Weather Wizard">
+		</div>
+	</div>
+    
     
     <div class="row">
         <div id="content" class="small-12 large-12 columns text-center">
-            <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">
+              <div id="walker" onClick="showWeather()"></div>
+<!--            <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">-->
         </div>
+        
     </div>
     
 
