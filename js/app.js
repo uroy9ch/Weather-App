@@ -74,6 +74,8 @@ function showWeather() {
 
 			//hide logo div
 			$('#logo').hide();
+			$('#zip').hide();
+			$('#goButton').hide();
 			//show result div
 			$('#result').show();
 

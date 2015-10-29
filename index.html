@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cmrWeatherapp</title>
     <link rel="stylesheet" href="stylesheets/app.css" /> 
+    <link rel="stylesheet" href="stylesheets/style.css" /> 
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 <!--
@@ -53,7 +54,21 @@
 		</div>
 	</div>
     
-<!-- duplicate ID content-->
+    <div class="row" id = 'result'>
+      <div class="small-12 large-12 columns text-center">
+      <div class="bubble">
+			<h2 id="description">Todays Weather - Foggy 50</h2>
+			<h2 id = 'aqi'> Feeling Froggy!</h2> 
+       </div>
+        <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
+        
+        
+
+        
+        
+       </div>
+    </div>
+          
     <div class="row">
         <div class="small-12 large-12 columns text-center">
               <div id="walker" onClick="showWeather()"></div>
@@ -66,40 +81,7 @@
     
 <!--    <div class="divider"></div>-->
         
-    <div class="row" id = 'result'>
-      <div class="small-12 large-12 columns text-center">
-        <h2 id="description">Todays Weather - Foggy 50</h2>
-         
-        <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
-        <h2 id = 'aqi'> Feeling Froggy!</h2>
-        
-        <div class="row">
-         
-<!--
-            <div class="small-3 small-offset-3 columns">
-                <button href="#" data-dropdown="dropAirQuality1" aria-controls="dropAirQuality1" aria-expanded="false" class="button dropdown">Air Quality</button><br>
-                <ul id="dropAirQuality1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                  <li><a href="#">High</a></li>
-                  <li><a href="#">Medium</a></li>
-                  <li><a href="#">Low</a></li>
-                </ul>
-            </div>
-            
-            <div class="small-3 columns end">
-                <button href="#" data-dropdown="dropPollution1" aria-controls="dropPollution1" aria-expanded="false" class="button dropdown">Pollution Index</button><br>
-                <ul id="dropPollution1" data-dropdown-content class="f-dropdown" aria-hidden="true">
-                  <li><a href="#">High</a></li>
-                  <li><a href="#">Medium</a></li>
-                  <li><a href="#">Low</a></li>
-                </ul> 
-            </div>
--->
 
-        </div>
-        
-        
-       </div>
-    </div>
 
 
 <!--            <a href="#" class="button [radius round]">Air Quality</a>-->
