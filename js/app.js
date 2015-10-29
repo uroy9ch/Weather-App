@@ -2,6 +2,7 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 $('#result').hide();
+$('#notify').hide();
 
 
 var totalFrames = 18;
@@ -36,12 +37,14 @@ function showWeather() {
 
 	var jqxhr = $.getJSON( url, function() {
 	  console.log( "success" );
+//		$('#notify').hide();
 	})
 	  .done(function() {
 		console.log( "second success" );
 	  })
 	  .fail(function() {
 		console.log( "error" );
+		$('#notify').show();
 	  })
 	  .always(function() {
 		console.log( "complete" );
@@ -51,6 +54,7 @@ function showWeather() {
 	// Set another completion function for the request above
 		jqxhr.complete(function() {
 			// Do variable assignment here
+//			console.log(jqxhr.responseJSON);
 			description = jqxhr.responseJSON.breezometer_description;
 			color = jqxhr.responseJSON.breezometer_color;
 			aqi = jqxhr.responseJSON.breezometer_aqi;
@@ -68,8 +72,8 @@ function showWeather() {
 	//		$("#content").html(...);
 	//	};
 
-			//hide wizard div
-			$('#content').hide();
+			//hide logo div
+			$('#logo').hide();
 			//show result div
 			$('#result').show();
 
