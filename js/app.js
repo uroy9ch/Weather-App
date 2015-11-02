@@ -78,6 +78,7 @@ function showWeather() {
 			$('#goButton').hide();
 			//show result div
 			$('#result').show();
+			$('#result').addClass('animated tada');
 
 			//populate content div based on weather
 			$('#description').html (description);
