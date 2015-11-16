@@ -9471,12 +9471,15 @@ form {
 }
 
 /* line 31, ../scss/app.scss */
+/*
 .wizard {
   width: 60%;
   padding: 30px;
 }
+*/
 
 /* line 37, ../scss/app.scss */
+/*
 #walker {
   background: url("../WizardSpriteloop.svg");
   width: 174px;
@@ -9484,6 +9487,7 @@ form {
   background-color: white;
   margin: auto;
 }
+*/
 
 /* line 48, ../scss/app.scss */
 .divider {
