@@ -1,86 +1,87 @@
 <!doctype html>
 <html class="no-js" lang="en">
-  <head>
-   	
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>cmrWeatherapp</title>
-    <link rel="stylesheet" href="stylesheets/animate.css">
-	<link rel="stylesheet" href="stylesheets/app.css" />
-<!--	<link rel="stylesheet" href="scss/app.scss" />-->
-    <link rel="stylesheet" href="stylesheets/style.css" /> 
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-    <script src="lib/p5.min.js"></script>
-    <script src="lib/p5.play.js"></script>
-    <script src="js/animation.js"></script>
-<!--
-    <script src="https://use.typekit.net/ghu1yik.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
--->
-  </head>
-  <body>
-  <div class="wizcontainer">
- 
-         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-<!--        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>-->
+	<head>
 
-<!-- 
-          <li><a href="#" class="button info">Air Quality</a></li>
-          <a href="#" class="button secondary">Allergies</a>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>cmrWeatherapp</title>
+		<link rel="stylesheet" href="stylesheets/animate.css">
+		<link rel="stylesheet" href="stylesheets/app.css" />
+		<!--	<link rel="stylesheet" href="scss/app.scss" />-->
+		<link rel="stylesheet" href="stylesheets/style.css" /> 
+		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+		<!--
+<script src="https://use.typekit.net/ghu1yik.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+-->
+	</head>
+	<body class= "mainbody">
+
+		<div id="wizcontainer">
+
+			<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+			<!--        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>-->
+
+			<!-- 
+<li><a href="#" class="button info">Air Quality</a></li>
+<a href="#" class="button secondary">Allergies</a>
 -->
 
 
-  
-  <form>
-     <div class="row">
-        <div class="large-12 columns">
-          <div class="row collapse">
-            <div class="small-10 columns">
-              <input id="zip" type="text" placeholder="Zip Code">
-            </div>
-            <div class="small-2 columns">
-              <a href="#" id="goButton" class="button postfix" onClick="showWeather()">Go</a>
-            </div>
-          </div>
-        </div>
-      </div> 
-  </form>
-   
-    <div class="row">
-        <div id="logo" class="small-12 large-12 columns text-center">
-        <div id="notify">
-        	<div data-alert class="alert-box alert round">
-			  Please enter a valid zip code.
-			  <a href="#" class="close">&times;</a>
-			</div> 
-		</div>
-			<img class="brand" src="WeatherWizardbrand.svg" alt="My Weather Wizard">
-		</div>
-	</div>
-    
-    <div class="row" id = 'result'>
-      <div class="small-12 large-12 columns text-center">
-      <div class="bubble">
-			<h2 id="description">Todays Weather - Foggy 50</h2>
-			<h2 id = 'aqi'> Feeling Froggy!</h2> 
-       </div>
-        <img class="frog" src="Froggy.png" alt="frog" onClick="showWeather()">
-       </div>
-    </div>
-          
-    <div class="row">
-        <div class="small-12 large-12 columns text-center">
-              <div id="walker" onClick="showWeather()"></div>
-<!--            <img class="wizard" src="Wizard.png" alt="Wizard" onClick="showWeather()">-->
-        </div>
-        
-    </div>
-    </div> <!-- wiz container -->
 
-    
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+			<form>
+				<div class="row">
+					<div class="large-12 columns">
+						<div class="row collapse">
+							<div class="small-10 columns">
+								<input id="zip" type="text" placeholder="Zip Code">
+							</div>
+							<div class="small-2 columns">
+								<a href="#" id="goButton" class="button postfix" onClick="showWeather()">Go</a>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</form>
+
+			<div class="row">
+				<div id="logo" class="small-12 large-12 columns text-center">
+					<div id="notify">
+						<div data-alert class="alert-box alert round">
+							Please enter a valid zip code.
+							<a href="#" class="close">&times;</a>
+						</div> 
+					</div>
+					<img class="brand" src="WeatherWizardbrand02.svg" alt="My Weather Wizard">
+				</div>
+			</div>
+
+			<div class="row" id="resetbutton">
+				<div class="small-12 large-12 columns">
+					<a href="#" id="resetButton" class="button postfix" onClick="reset()">Reset</a>
+				</div>
+			</div>
+		
+			<div class="row" id = 'result'>
+				<!--      <div class="small-12 large-12 columns text-center">-->
+				<div id="animatedResult" class="small-12 large-12 columns text-center">
+					<div class="bubble">
+						<h2 id="description">Todays Weather - Foggy 50</h2>
+						<h2 id = 'aqi'> Feeling Froggy!</h2> 
+					</div>
+				</div>
+			</div>
+		</div> <!-- wiz container -->
+		<div id="canvas-wrapper"></div>
+
+
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/foundation/js/foundation.min.js"></script>
+
+		<script src="lib/p5.min.js"></script>
+		<script src="lib/p5.play.js"></script>
+		<script src="js/animation.js"></script>
+		<!--    <script src="js/app.js"></script>-->
+	</body>
 </html>

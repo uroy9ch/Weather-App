@@ -1,16 +1,23 @@
 
 .wizcontainer {
-	background-image: url("../img_files/bg.png");	
+	width: 2000px;
+	height: 1200px;
+}
+
+.mainbody {
+	background-image: url("../img_files/bg.png");
+	background-size: cover;	
 }
 
 .bubble 
 {
+margin-top: 60px;
 margin-left: auto;
 margin-right: auto;
 position: relative;
-width: 250px;
-height: 120px;
-padding: 0px;
+width: 330px;
+height: 163px;
+padding: 15px;
 background: #FFFFFF;
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
@@ -29,7 +36,7 @@ display: block;
 width: 0;
 z-index: 1;
 bottom: -15px;
-left: 110px;
+left: 150px;
 }
 
 .bubble:before 
@@ -43,5 +50,15 @@ display: block;
 width: 0;
 z-index: 0;
 bottom: -18px;
-left: 109px;
+left: 148px;
+}
+
+/********/
+
+h2 #description{
+	font-size: 14px;	
+}
+
+#wizcontainer {
+	height: 225px;	
 }

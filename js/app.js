@@ -79,7 +79,7 @@ function showWeather() {
 			$('#result').addClass('animated tada');
 
 			//populate content div based on weather
-			$('#description').html (description);
+			$('#description').html(description);
 			$('#aqi').html("<span style='color: " + color + "'>Air Quality is: " + aqi + "</span>");
 			
 		});

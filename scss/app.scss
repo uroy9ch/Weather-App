@@ -5,11 +5,8 @@ h2{
     font-family: 'Lato', sans-serif;
 }
 
-.wizcontainer {
-	background-image: url("../img_files/bg.png");	
-}
 
-#description h2 {
+h2 #description{
 	font-size: 14px;	
 }
 
@@ -32,6 +29,10 @@ body{
     margin-bottom: 40px;
 }
 
+#wizcontainer {
+	height: 250px;	
+}
+
 form {
     padding-top: 20px;
 }
@@ -42,17 +43,11 @@ form {
     
 }
 
-/*
-#walker {
-  background: url('../WizardSpriteloop.svg');
-  //background-size: 522px auto;
-  width: 174px;
-  height: 240px;
-  margin: auto;
-//  position: absolute;
-//  top: 0; left: 0; bottom: 0; right: 0;
+.frog {
+    width: 60%;
+    padding: 30px;
+    
 }
-*/
 
 .divider{
     width: 100%;
@@ -61,11 +56,3 @@ form {
     margin-top: 100px;
     margin-bottom: 30px;
 }
-//a.button.very-successful {
-//    background-color: aqua;
-
-//}
-
-//.button {
-//    float: left;
-//}
